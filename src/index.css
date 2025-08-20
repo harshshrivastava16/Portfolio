@@ -1,0 +1,175 @@
+@import 'tailwindcss';
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+select {
+  background-color: #1a1a1a; /* dark bg */
+  color: white; /* text white */
+}
+
+select option {
+  background-color: #1a1a1a; /* dark dropdown */
+  color: white; /* text white */
+}
+
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+/* Firefox */
+html {
+  scrollbar-width: none;
+}
+
+body {
+  -ms-overflow-style: none;
+}
+
+/* Background gradients */
+.gradient-bg {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+/* Section spacing */
+.section-spacing {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .section-spacing {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Hide elements for mobile/desktop */
+.mobile-hidden { display: none; }
+@media (min-width: 768px) {
+  .mobile-hidden { display: block; }
+}
+
+.desktop-hidden { display: block; }
+@media (min-width: 768px) {
+  .desktop-hidden { display: none; }
+}
+
+/* Scrollbar hidden */
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+/* Focus and selection */
+.focus-visible {
+  outline: none;
+  ring-width: 2px;
+  ring-color: #805ad5; /* purple-500 */
+  ring-offset-width: 2px;
+}
+
+.selection {
+  background-color: #805ad5;
+  color: #fff;
+}
+
+/* Cursor styles */
+.cursor-pointer { cursor: pointer; }
+.cursor-default { cursor: default; }
+.cursor-not-allowed { cursor: not-allowed; }
+
+/* User select */
+.user-select-none { user-select: none; }
+.user-select-text { user-select: text; }
+.user-select-all { user-select: all; }
+.user-select-auto { user-select: auto; }
+
+/* Whitespace & word break */
+.whitespace-normal { white-space: normal; }
+.whitespace-nowrap { white-space: nowrap; }
+.whitespace-pre { white-space: pre; }
+.whitespace-pre-line { white-space: pre-line; }
+.whitespace-pre-wrap { white-space: pre-wrap; }
+
+.word-break { word-break: normal; }
+.word-wrap { word-wrap: break-word; }
+.word-break-all { word-break: break-all; }
+
+/* Text align */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+
+/* Text decoration */
+.no-underline { text-decoration: none; }
+.underline { text-decoration: underline; }
+.line-through { text-decoration: line-through; }
+.overline { text-decoration: overline; }
+
+/* Text transform */
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
+.capitalize { text-transform: capitalize; }
+.normal-case { text-transform: none; }
+
+/* Buttons & cards — use Tailwind classes in HTML directly */
+/* Example:
+<button class="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-transform duration-300 transform hover:scale-105 shadow-lg">
+  Primary
+</button>
+<div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-transform duration-300 transform hover:-translate-y-1">
+  Card
+</div>
+*/
